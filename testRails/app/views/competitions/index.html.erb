@@ -1,0 +1,74 @@
+<h1 class="mx-auto mt-5" style="width: 20%;">Final Table</h1>
+
+ <table class="table table-secondary table-striped table-bordered border-dark mx-auto mt-2" style="width:50%;">
+    <thead>
+      <tr>
+            <th>Team <i class="fa-solid fa-people-group"></i></th>
+            <th>MP</th>
+            <th>W</th>
+            <th>D</th>
+            <th>L</th>
+            <th>P</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <%= content_tag_for(:tr, @competition) do |competition| %>
+            <td><%= competition.team %></td>
+            <td><%= competition.mp %></td>
+            <td><%= competition.w %></td>
+            <td><%= competition.d %></td>
+            <td><%= competition.l %></td>
+            <td><%= competition.p %></td>
+      <% end %>
+    </tbody>
+  </table>
+
+<h2 class="mx-auto mt-5" style="width: 20%;">Games Table</h2>
+
+  <table class="table table-secondary table-striped table-bordered border-dark mx-auto mt-2" style="width:50%;" >
+    <thead>
+        <tr>
+            <th>Game <i class="fa-regular fa-futbol"></i></th>
+            <th>Win <i class="fa-solid fa-trophy"></i></th>
+            <th>Lost <i class="fa-solid fa-face-sad-tear"></i></th>
+            <th>Draw <i class="fa-solid fa-handshake"></i></th>
+        </tr>
+    </thead>
+    <tbody>
+            <td>First</td>
+            <td><%= @teamTwo%></td>
+            <td><%= @teamThree%></td>
+            <td>--</td>
+    </tbody>
+    <tbody>
+            <td>Second</td>
+            <td><%= @teamOne%></td>
+            <td><%= @teamFour%></td>
+            <td><i class="fa-solid fa-circle-check"></i></td>
+    </tbody>
+    <tbody>
+            <td>Third</td>
+            <td><%= @teamOne%></td>
+            <td><%= @teamTwo%></td>
+            <td>--</td>
+    </tbody>
+    <tbody>
+            <td>Fourth</td>
+            <td><%= @teamFour%></td>
+            <td><%= @teamThree%></td>
+            <td>--</td>
+    </tbody>
+    <tbody>
+            <td>Fifth</td>
+            <td><%= @teamThree%></td>
+            <td><%= @teamOne%></td>
+            <td>--</td>
+    </tbody>
+    <tbody>
+            <td>Sixth</td>
+            <td><%= @teamTwo%></td>
+            <td><%= @teamFour%></td>
+            <td>--</td>
+    </tbody>
+  </table>
